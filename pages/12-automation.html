@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第十二章 自动化与定时任务 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第十二章 自动化与定时任务</h1>
+<p class="page-subtitle">指定时间自动执行任务——让 WorkBuddy 成为你的自动化工人</p>
+
+<!-- 12.1 -->
+<h2 id="sec-12-1">12.1 什么是自动化</h2>
+
+<p><strong>自动化</strong>是一种特殊的任务形式，和普通任务一样会跑出一次对话/执行，只是触发方式不是手动发起，而是按预设条件<strong>自动触发</strong>。</p>
+
+<div class="highlight-box">
+  <div class="title">💡 核心概念</div>
+  <ul style="margin:0">
+    <li>到点自动执行一段 prompt 并推送通知</li>
+    <li>自动化是<strong>个人级别</strong>的，仅创建者本人可见、可管理</li>
+    <li>当前仅支持<strong>定时执行</strong>一种触发形态</li>
+  </ul>
+</div>
+
+<!-- 12.2 -->
+<h2 id="sec-12-2">12.2 创建定时任务</h2>
+
+<ol class="step-list">
+  <li>在左侧导航栏点击 <strong>"设置"</strong>，进入自动化面板</li>
+  <li>点击 <strong>"+ 添加"</strong> 按钮</li>
+  <li>填写以下配置项</li>
+</ol>
+
+<h3>配置项说明</h3>
+<table>
+  <tr><th>配置项</th><th>说明</th><th>示例</th></tr>
+  <tr><td>名称</td><td>自动化任务的名称</td><td>"每日新闻摘要"</td></tr>
+  <tr><td>提示词</td><td>自动执行时发送的 prompt</td><td>"搜索今日科技新闻，生成 500 字摘要"</td></tr>
+  <tr><td>执行频率</td><td>定时规则（每天/每周/每月/一次性）</td><td>每天 09:00</td></tr>
+  <tr><td>连接器</td><td>可选，指定执行时使用的连接器</td><td>腾讯文档</td></tr>
+  <tr><td>模型</td><td>可选，指定使用的 AI 模型</td><td>混元</td></tr>
+  <tr><td>推送小程序</td><td>可选，执行完成后推送结果到微信小程序</td><td>开启</td></tr>
+</table>
+
+<!-- 12.3 -->
+<h2 id="sec-12-3">12.3 调度规则详解</h2>
+
+<p>自动化支持两种调度类型：</p>
+
+<h3>周期性执行（Recurring）</h3>
+<table>
+  <tr><th>频率</th><th>RRULE 示例</th><th>说明</th></tr>
+  <tr><td>每天</td><td><code>FREQ=DAILY</code></td><td>每天执行一次</td></tr>
+  <tr><td>每周</td><td><code>FREQ=WEEKLY;BYDAY=MO</code></td><td>每周一执行</td></tr>
+  <tr><td>每月</td><td><code>FREQ=MONTHLY</code></td><td>每月 1 号执行</td></tr>
+  <tr><td>每小时</td><td><code>FREQ=HOURLY</code></td><td>每小时执行一次</td></tr>
+</table>
+
+<h3>一次性执行（Once）</h3>
+<p>设置一个具体的时间点，任务在该时间执行一次后自动结束。</p>
+<p>示例：<code>2026-03-20T14:30:00</code>（ISO 8601 格式）</p>
+
+<h3>有效期设置</h3>
+<table>
+  <tr><th>字段</th><th>说明</th></tr>
+  <tr><td>validFrom</td><td>任务在此日期之前不会执行</td></tr>
+  <tr><td>validUntil</td><td>任务在此日期之后停止执行</td></tr>
+</table>
+
+<!-- 12.4 -->
+<h2 id="sec-12-4">12.4 自动化应用场景</h2>
+
+<div class="feature-grid">
+  <div class="feature-card">
+    <div class="icon">📰</div>
+    <h4>日报推送</h4>
+    <p>每天早 9 点搜索新闻摘要并推送</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">📊</div>
+    <h4>周报生成</h4>
+    <p>每周五 17 点汇总本周工作生成周报</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">💾</div>
+    <h4>定时备份</h4>
+    <p>每天凌晨备份重要文件到指定目录</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🔍</div>
+    <h4>竞品监控</h4>
+    <p>每天抓取竞品网站变化并生成报告</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">☀️</div>
+    <h4>晨间播报</h4>
+    <p>每天早上推送天气、日程、待办</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">📅</div>
+    <h4>月度汇总</h4>
+    <p>每月 1 号汇总上月数据生成报告</p>
+  </div>
+</div>
+
+<h3>自动化模板</h3>
+<table>
+  <tr><th>模板</th><th>说明</th></tr>
+  <tr><td>新闻推送</td><td>定时搜索新闻并推送摘要</td></tr>
+  <tr><td>周报</td><td>定时汇总工作记录生成周报</td></tr>
+  <tr><td>体检预约</td><td>定时提醒预约体检</td></tr>
+  <tr><td>学习计划</td><td>定时推送学习内容</td></tr>
+</table>
+
+<h3>技能包驱动自动化</h3>
+<p>结合技能包，可以实现更复杂的自动化流程，例如周报生成流程：</p>
+<ol>
+  <li>API 同步工作数据</li>
+  <li>统计分析本周完成情况</li>
+  <li>生成结构化周报</li>
+  <li>导出为指定格式</li>
+  <li>分享到指定渠道</li>
+</ol>
+
+<!-- 12.5 -->
+<h2 id="sec-12-5">12.5 管理自动化</h2>
+
+<table>
+  <tr><th>操作</th><th>说明</th></tr>
+  <tr><td>查看列表</td><td>在自动化面板查看所有已创建的自动化任务</td></tr>
+  <tr><td>编辑</td><td>修改名称、提示词、频率等配置</td></tr>
+  <tr><td>暂停 / 恢复</td><td>临时停止或恢复自动化执行</td></tr>
+  <tr><td>删除</td><td>永久删除自动化任务</td></tr>
+  <tr><td>查看执行历史</td><td>查看每次执行的结果和状态</td></tr>
+</table>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 最佳实践</div>
+  <ul style="margin:0">
+    <li>提示词要<strong>具体明确</strong>，因为自动化执行时没有人工补充上下文的机会</li>
+    <li>建议先手动测试一次提示词效果，确认满意后再设为自动化</li>
+    <li>合理设置有效期，避免不需要的自动化持续消耗 Credits</li>
+    <li>开启推送通知，及时了解自动化执行结果</li>
+  </ul>
+</div>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：MCP 配置</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：记忆系统 →</a>
+</div>
+
+</div>
+</body>
+</html>

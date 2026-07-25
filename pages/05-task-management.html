@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第五章 任务管理 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第五章 任务管理</h1>
+<p class="page-subtitle">查看任务列表、搜索筛选、状态管理和继续处理</p>
+
+<!-- 5.1 -->
+<h2 id="sec-5-1">5.1 任务列表</h2>
+
+<p>左侧边栏会显示你创建过的任务，方便随时回看、继续处理和切换上下文。</p>
+
+<p>当前列表分为两个板块：</p>
+<table>
+  <tr><th>板块</th><th>说明</th></tr>
+  <tr><td>任务</td><td>展示最近访问或最近更新的任务</td></tr>
+  <tr><td>空间</td><td>按工作空间整理的任务，方便在同一项目下集中查看</td></tr>
+</table>
+
+<p>每个任务卡片通常会显示：</p>
+<ul>
+  <li>任务标题</li>
+  <li>当前状态</li>
+  <li>最近更新时间或创建时间</li>
+</ul>
+
+<!-- 5.2 -->
+<h2 id="sec-5-2">5.2 搜索与筛选</h2>
+
+<p>在任务列表顶部，你可以使用搜索和筛选功能快速定位任务：</p>
+
+<table>
+  <tr><th>功能</th><th>说明</th></tr>
+  <tr><td>搜索</td><td>按任务标题快速查找任务</td></tr>
+  <tr><td>筛选</td><td>打开筛选面板，按状态或日期筛选</td></tr>
+</table>
+
+<h3>常见筛选方式</h3>
+<ul>
+  <li><strong>按状态筛选</strong>：如进行中、已完成、失败等</li>
+  <li><strong>按日期筛选</strong>：缩小到某一时间范围内</li>
+  <li><strong>重置筛选</strong>：清空当前筛选条件，恢复查看全部</li>
+</ul>
+
+<!-- 5.3 -->
+<h2 id="sec-5-3">5.3 任务状态</h2>
+
+<p>任务会随着执行过程在不同状态之间变化：</p>
+
+<table>
+  <tr><th>状态</th><th>说明</th><th>颜色标识</th></tr>
+  <tr><td>规划中</td><td>WorkBuddy 正在分析需求并整理执行思路</td><td><span class="badge badge-primary">规划中</span></td></tr>
+  <tr><td>进行中</td><td>WorkBuddy 正在执行任务</td><td><span class="badge badge-primary">进行中</span></td></tr>
+  <tr><td>已完成</td><td>任务已经执行完成</td><td><span class="badge badge-success">已完成</span></td></tr>
+  <tr><td>失败</td><td>执行过程中出现问题，任务未能完成</td><td><span class="badge badge-warning">失败</span></td></tr>
+  <tr><td>待处理</td><td>任务等待进一步处理或输入</td><td><span class="badge badge-warning">待处理</span></td></tr>
+  <tr><td>已归档</td><td>任务已被归档，用于后续查阅</td><td><span class="badge badge-primary">已归档</span></td></tr>
+</table>
+
+<!-- 5.4 -->
+<h2 id="sec-5-4">5.4 管理操作</h2>
+
+<h3>任务列表操作</h3>
+<p>在任务列表中，你可以进行以下操作：</p>
+<ul>
+  <li>点击任务卡片，进入该任务的对话和结果页面</li>
+  <li>通过搜索或筛选，快速找到特定任务</li>
+  <li>在已有任务基础上继续发送消息</li>
+  <li>对不再需要的任务执行清理操作</li>
+</ul>
+
+<h3>单条任务操作</h3>
+<table>
+  <tr><th>操作</th><th>说明</th></tr>
+  <tr><td>📌 置顶</td><td>将任务置于列表顶端</td></tr>
+  <tr><td>📁 打开文件夹</td><td>打开任务所在文件夹</td></tr>
+  <tr><td>✏️ 重命名</td><td>修改任务名</td></tr>
+  <tr><td>💾 保存到工作空间</td><td>可开启多个 Agent 同时协作，在任务列表中持久保存，随时用 IDE 打开查看</td></tr>
+  <tr><td>🔗 分享任务</td><td>分享到任意渠道后，自动生成公开链接</td></tr>
+  <tr><td>🗑️ 删除</td><td>从列表中删除任务</td></tr>
+  <tr><td>📦 归档</td><td>任务归档后可在「系统设置 - 数据管理」中查看</td></tr>
+</table>
+
+<h3>工作空间操作</h3>
+<table>
+  <tr><th>操作</th><th>说明</th></tr>
+  <tr><td>➕ 新建任务</td><td>在同一个工作空间中开启新任务</td></tr>
+  <tr><td>📁 打开文件夹</td><td>打开工作空间所在文件夹</td></tr>
+  <tr><td>➖ 从列表中移除</td><td>从列表中移除工作空间</td></tr>
+</table>
+
+<!-- 5.5 -->
+<h2 id="sec-5-5">5.5 继续处理已有任务</h2>
+
+<p>对于已经完成、失败或暂时中断的任务，你都可以重新进入任务继续补充消息。这样可以在已有上下文基础上继续推进，而不必从头创建。</p>
+
+<h3>适合继续处理的场景</h3>
+<ul>
+  <li>任务第一次结果还不够完整，想继续细化</li>
+  <li>任务执行失败后，需要补充信息再试一次</li>
+  <li>想基于之前的结果继续扩展新的需求</li>
+</ul>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 最佳实践</div>
+  <p>保持连续对话比重新创建任务更高效——WorkBuddy 会基于之前的上下文继续处理，无需重复描述背景信息。</p>
+</div>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：创建任务</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：任务对话 →</a>
+</div>
+
+</div>
+</body>
+</html>

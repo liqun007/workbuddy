@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第十八章 进阶技巧与最佳实践 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第十八章 进阶技巧与最佳实践</h1>
+<p class="page-subtitle">高效养虾 10 招、Prompt 黄金法则、Credits 优化与安全实践</p>
+
+<!-- 18.1 -->
+<h2 id="sec-18-1">18.1 高效养虾 10 招</h2>
+
+<p>以下是官方推荐的高效使用 WorkBuddy 的 10 个技巧：</p>
+
+<div class="info-card">
+  <div class="info-card-title">① 清晰表达：做什么 + 有什么 + 怎么样</div>
+  <p><strong>❌ 差</strong>："帮我把上次的会议纪要整理一下"</p>
+  <p><strong>✅ 好</strong>："把 D:/会议纪要/0320产品评审.docx 里的会议纪要整理成清单，包含：1) 每个议题的结论；2) 对应责任人和截止日期"</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">② 小步快跑</div>
+  <p>不要一次性描述过于复杂的任务，拆成小步骤逐步执行，每步确认后再继续。这样可以及时纠偏，避免大返工。</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">③ 不满意就调整</div>
+  <p>对结果不满意时，直接告诉 WorkBuddy 哪里需要修改。它会基于已有上下文继续调整，不需要重新开始。</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">④ 先本地后远程</div>
+  <p>优先在本地完成复杂任务，确认效果后再使用远程操控。远程操控适合简单指令和快速查询。</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">⑤ 给身份（专家）</div>
+  <p>使用专家中心给 WorkBuddy 切换专业角色，在特定领域中获得更专业的回答。如数据分析用 Phoebe、内容创作用 Kai。</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">⑥ 给例子</div>
+  <p>在指令中提供参考样例，让 WorkBuddy 更好地理解你的期望格式和风格。如"参考这个格式：..."</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">⑦ 善用多任务</div>
+  <p>同时发起多个不相关的任务并行处理，WorkBuddy 支持多任务同时执行，大幅提升效率。</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">⑧ 易改频备份</div>
+  <p>对重要文件先做备份，再让 WorkBuddy 修改。养成"改前备份"的习惯，避免不可逆的损失。</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">⑨ 用好自动化</div>
+  <p>将重复性任务设为自动化定时执行，如每日新闻摘要、每周周报生成，让 WorkBuddy 自动帮你干活。</p>
+</div>
+
+<div class="info-card">
+  <div class="info-card-title">⑩ 偷懒 + 激励版提示</div>
+  <p>用"帮我做个完美的方案"不如用"帮我做个方案，做好了请你喝奶茶"——激励性的提示词有时效果更好（笑）。</p>
+</div>
+
+<!-- 18.2 -->
+<h2 id="sec-18-2">18.2 Prompt 黄金法则</h2>
+
+<div class="highlight-box">
+  <div class="title">🎯 Prompt 黄金公式</div>
+  <p style="margin:0"><strong>目标 + 输入 + 格式 + 约束 = 完美指令</strong></p>
+</div>
+
+<table>
+  <tr><th>要素</th><th>说明</th><th>示例</th></tr>
+  <tr><td>目标</td><td>明确要做什么</td><td>"生成一份销售分析报告"</td></tr>
+  <tr><td>输入</td><td>提供数据来源</td><td>"读取 data/ 目录下的 Q2 销售数据"</td></tr>
+  <tr><td>格式</td><td>指定输出格式</td><td>"5 页 PPT，蓝色风格"</td></tr>
+  <tr><td>约束</td><td>限定条件和要求</td><td>"包含趋势图和数据表，不超过 10 分钟完成"</td></tr>
+</table>
+
+<h3>对比示例</h3>
+<div class="callout callout-danger">
+  <div class="callout-title">❌ 差的指令</div>
+  <p>"帮我做个报告"</p>
+</div>
+
+<div class="callout callout-success">
+  <div class="callout-title">✅ 好的指令</div>
+  <p>"读取 data/ 目录下的 Q2 销售数据，生成 5 页 PPT，蓝色风格，包含趋势图和数据表，每页不超过 5 分钟讲解内容"</p>
+</div>
+
+<!-- 18.3 -->
+<h2 id="sec-18-3">18.3 善用 @ 引用</h2>
+
+<p>使用 <code>@</code> 引用可以精准地告诉 WorkBuddy 数据在哪里：</p>
+
+<table>
+  <tr><th>引用方式</th><th>说明</th><th>示例</th></tr>
+  <tr><td>@文件名</td><td>引用具体文件</td><td>@销售数据.xlsx</td></tr>
+  <tr><td>@文件夹/</td><td>引用整个文件夹</td><td>@data/</td></tr>
+  <tr><td>@ 搜索</td><td>搜索并引用</td><td>输入 @ 后搜索定位</td></tr>
+</table>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 为什么用 @</div>
+  <p><code>@</code> 引用让 AI 精准知道数据位置，避免模糊描述导致的错误。比"帮我分析上次那个文件"更准确。</p>
+</div>
+
+<!-- 18.4 -->
+<h2 id="sec-18-4">18.4 检查点机制</h2>
+
+<p>WorkBuddy 的检查点（Checkpoints）功能让你可以在关键节点保存状态：</p>
+
+<table>
+  <tr><th>场景</th><th>使用方式</th></tr>
+  <tr><td>重要操作前</td><td>打快照，翻车可回退</td></tr>
+  <tr><td>方案对比</td><td>从同一检查点分叉，比较不同方案</td></tr>
+  <tr><td>实验尝试</td><td>随便试，不满意回到检查点</td></tr>
+</table>
+
+<!-- 18.5 -->
+<h2 id="sec-18-5">18.5 Credits 优化</h2>
+
+<p>合理使用 Credits 可以让你在免费额度内完成更多任务：</p>
+
+<h3>任务消耗参考</h3>
+<table>
+  <tr><th>任务类型</th><th>建议 Credits 范围</th></tr>
+  <tr><td>基础任务（简单问答、短文档）</td><td>100 - 500</td></tr>
+  <tr><td>复杂任务（数据分析、长报告）</td><td>500 - 2000</td></tr>
+  <tr><td>代码开发（全栈开发、复杂重构）</td><td>1000 - 5000</td></tr>
+</table>
+
+<h3>省钱技巧</h3>
+<ul>
+  <li><strong>选用混元模型</strong>：混元响应快且省 Credits，适合日常任务</li>
+  <li><strong>先用 Ask 咨询</strong>：不确定方案时先用 Ask 模式咨询，避免不必要的执行消耗</li>
+  <li><strong>指令要精准</strong>：一次说清楚比反复修改更省 Credits</li>
+  <li><strong>避免重复任务</strong>：使用继续对话而非重新创建</li>
+  <li><strong>连接器读写不消耗积分</strong>：只有 AI 理解和汇总外部数据时才消耗</li>
+  <li><strong>记忆功能不消耗积分</strong>：记忆提取由 WorkBuddy 自费完成</li>
+</ul>
+
+<!-- 18.6 -->
+<h2 id="sec-18-6">18.6 安全实践</h2>
+
+<div class="callout callout-danger">
+  <div class="callout-title">🔒 安全最佳实践</div>
+  <ul style="margin:0">
+    <li><strong>仅授权工作夹</strong>：只授权必要的文件夹，不授权整个磁盘</li>
+    <li><strong>避免远程操作机密文件</strong>：远程操控时不涉及敏感文件</li>
+    <li><strong>开启拦截</strong>：确保高危操作拦截已开启</li>
+    <li><strong>定期查日志</strong>：检查任务执行日志，确认无异常操作</li>
+    <li><strong>限制权限</strong>：按需授权，不超额授权</li>
+    <li><strong>API 密钥妥善保管</strong>：不在公共设备或共享环境填写</li>
+    <li><strong>不再使用的连接器及时撤销</strong>：避免不必要的授权风险</li>
+  </ul>
+</div>
+
+<h3>安全层级</h3>
+<table>
+  <tr><th>层级</th><th>保护措施</th></tr>
+  <tr><td>文件授权</td><td>仅授权必要文件夹，系统敏感目录自动拦截</td></tr>
+  <tr><td>操作确认</td><td>高危操作（删除、移动）需二次确认</td></tr>
+  <tr><td>数据处理</td><td>本地处理为主，数据片段用后即弃，不用于训练</td></tr>
+  <tr><td>连接器</td><td>独立授权、不主动定时抓取、不超出已有权限</td></tr>
+  <tr><td>记忆</td><td>仅本人可见，支持随时删除或关闭</td></tr>
+</table>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：知识库搭建</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：常见问题与避坑指南 →</a>
+</div>
+
+</div>
+</body>
+</html>

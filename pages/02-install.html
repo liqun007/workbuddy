@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第二章 安装与配置 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第二章 安装与配置</h1>
+<p class="page-subtitle">从零开始：下载安装、账号登录、界面认识与初始配置</p>
+
+<!-- 2.1 -->
+<h2 id="sec-2-1">2.1 环境准备</h2>
+
+<h3>系统要求</h3>
+<table>
+  <tr><th>操作系统</th><th>最低版本</th><th>备注</th></tr>
+  <tr><td>Windows</td><td>Windows 10 (1903+)</td><td>建议 Windows 11</td></tr>
+  <tr><td>macOS</td><td>macOS 11 (Big Sur)+</td><td>支持 Intel 和 Apple Silicon</td></tr>
+</table>
+
+<h3>必备运行环境</h3>
+<div class="callout callout-warning">
+  <div class="callout-title">⚠️ 安装前必读</div>
+  <p>请确保已安装以下运行环境，并<strong>在安装后重启电脑</strong>：</p>
+</div>
+
+<ul>
+  <li><strong>Node.js</strong>（v18+）：用于技能和 MCP 脚本运行</li>
+  <li><strong>Git</strong>：用于版本管理和代码相关任务</li>
+  <li><strong>.NET Runtime</strong>（仅 Windows）：部分功能依赖</li>
+</ul>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 安装建议</div>
+  <p>安装 WorkBuddy 前建议<strong>关闭杀毒软件</strong>和同类 AI 工具，避免安装被拦截或冲突。安装路径<strong>避免使用中文</strong>。</p>
+</div>
+
+<!-- 2.2 -->
+<h2 id="sec-2-2">2.2 下载与安装</h2>
+
+<h3>Windows 安装</h3>
+<ol class="step-list">
+  <li>访问官网 <a href="https://www.codebuddy.cn" target="_blank">codebuddy.cn</a>，点击下载 Windows 版安装包（约 487MB）</li>
+  <li><strong>右键 → 以管理员身份运行</strong> Setup.exe</li>
+  <li>选择安装路径（建议默认路径，避免中文和空格）</li>
+  <li>等待安装完成，点击"完成"启动 WorkBuddy</li>
+  <li><strong>重启电脑</strong>（确保运行环境生效）</li>
+</ol>
+
+<h3>macOS 安装</h3>
+<ol class="step-list">
+  <li>访问官网下载 macOS 版安装包（.dmg 文件）</li>
+  <li>双击打开 .dmg 文件</li>
+  <li>将 WorkBuddy 图标拖拽至"应用程序"文件夹</li>
+  <li>首次打开时如提示"无法验证开发者"，前往"系统偏好设置 → 安全性与隐私"，点击"仍要打开"</li>
+  <li>启动 WorkBuddy</li>
+</ol>
+
+<!-- 2.3 -->
+<h2 id="sec-2-3">2.3 账号登录</h2>
+
+<p>WorkBuddy 支持以下登录方式：</p>
+
+<table>
+  <tr><th>登录方式</th><th>说明</th></tr>
+  <tr><td>腾讯云账号</td><td>使用腾讯云账号直接登录</td></tr>
+  <tr><td>微信扫码</td><td>使用微信扫码快速登录</td></tr>
+</table>
+
+<div class="callout callout-success">
+  <div class="callout-title">🎁 新用户福利</div>
+  <p>首次登录即可获得 <strong>5000 Credits</strong> 免费积分，足够体验大部分功能。</p>
+</div>
+
+<!-- 2.4 -->
+<h2 id="sec-2-4">2.4 界面介绍</h2>
+
+<p>WorkBuddy 的界面分为三大区域，布局清晰直观：</p>
+
+<div class="feature-grid">
+  <div class="feature-card">
+    <div class="icon">📋</div>
+    <h4>侧边栏（左）</h4>
+    <p>显示任务列表（按文件夹分组），支持搜索和管理。底部显示用户头像。入口包含技能、专家、连接器</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">💬</div>
+    <h4>对话区（中）</h4>
+    <p>核心交互区域，包含任务标题栏、消息列表和输入框。在此输入需求、查看执行过程</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">📦</div>
+    <h4>结果区（右）</h4>
+    <p>展示产物、全部文件、变更、预览等视图。无需离开任务即可查看成果</p>
+  </div>
+</div>
+
+<h3>侧边栏功能入口</h3>
+<table>
+  <tr><th>入口</th><th>功能</th></tr>
+  <tr><td>📋 任务</td><td>查看和管理所有任务，按工作空间分组</td></tr>
+  <tr><td>⚡ 技能</td><td>浏览、安装和管理技能市场</td></tr>
+  <tr><td>🎓 专家</td><td>进入专家中心，召唤领域专家</td></tr>
+  <tr><td>🔌 连接器</td><td>管理外部服务连接（邮箱、文档等）</td></tr>
+  <tr><td>📁 项目</td><td>团队协作项目空间</td></tr>
+  <tr><td>⚙️ 设置</td><td>账户、记忆、自动化等配置</td></tr>
+</table>
+
+<!-- 2.5 -->
+<h2 id="sec-2-5">2.5 初始配置</h2>
+
+<h3>文件夹授权</h3>
+<p>首次使用需要授权 WorkBuddy 访问本地文件夹：</p>
+<ol class="step-list">
+  <li>点击"选择工作空间"或前往设置页面</li>
+  <li>勾选需要授权的文件夹（推荐：桌面、文档、下载）</li>
+  <li>系统敏感目录会自动拦截，无需担心</li>
+  <li>高危操作（删除、移动）需要二次确认</li>
+</ol>
+
+<div class="callout callout-danger">
+  <div class="callout-title">🔒 安全提示</div>
+  <p>WorkBuddy 只能访问你<strong>主动勾选授权</strong>的文件夹。所有文件处理默认在本地完成，原始数据不上传云端。服务端仅处理数据片段，用后即弃，不保存也不用于模型训练。</p>
+</div>
+
+<h3>模型选择</h3>
+<p>WorkBuddy 支持多种 AI 模型，按场景选择：</p>
+<table>
+  <tr><th>模型</th><th>特点</th><th>适用场景</th></tr>
+  <tr><td>混元</td><td>响应快，省 Credits</td><td>日常办公、简单任务</td></tr>
+  <tr><td>DeepSeek</td><td>推理能力强，准确度高</td><td>复杂分析、代码开发</td></tr>
+  <tr><td>GLM</td><td>中文理解优秀</td><td>文档写作、内容创作</td></tr>
+  <tr><td>Kimi</td><td>长文本处理</td><td>长文档分析、阅读</td></tr>
+</table>
+
+<h3>快捷键设置</h3>
+<table>
+  <tr><th>快捷键</th><th>功能</th></tr>
+  <tr><td><code>Ctrl + Alt + W</code></td><td>唤起 WorkBuddy（全局）</td></tr>
+  <tr><td><code>Ctrl/Cmd + V</code></td><td>粘贴截图到输入框</td></tr>
+  <tr><td><code>Ctrl/Cmd + ←</code></td><td>上一页（教程内）</td></tr>
+  <tr><td><code>Ctrl/Cmd + →</code></td><td>下一页（教程内）</td></tr>
+</table>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：认识 WorkBuddy</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：三大工作模式 →</a>
+</div>
+
+</div>
+</body>
+</html>

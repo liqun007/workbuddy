@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第八章 技能系统 Skills | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第八章 技能系统 Skills</h1>
+<p class="page-subtitle">技能是 WorkBuddy 的"超能力插件"——安装即用，无限扩展</p>
+
+<!-- 8.1 -->
+<h2 id="sec-8-1">8.1 什么是技能</h2>
+
+<p><strong>技能（Skill）</strong>是可复用的 WorkBuddy 能力扩展单元，封装了特定领域的指令、工具和知识，使智能体能够执行专业化的任务。</p>
+
+<p>你可以把它理解为<strong>给 AI 同事安装的"专业培训"</strong>。每个技能封装了一套针对特定场景的专业工作流。</p>
+
+<div class="highlight-box">
+  <div class="title">📊 技能生态数据</div>
+  <ul style="margin:0">
+    <li>SkillHub 已收录 <strong>7 万+</strong> 技能</li>
+    <li>上线两月累计下载 <strong>3000 万+</strong></li>
+    <li>覆盖文档处理、数据分析、代码开发、设计创意等多个领域</li>
+    <li>内置技能 <strong>301 个</strong>，无需安装即可使用</li>
+  </ul>
+</div>
+
+<table>
+  <tr><th>特征</th><th>说明</th></tr>
+  <tr><td>可发现性</td><td>成员可在客户端按分类浏览和使用已安装的 Skill</td></tr>
+  <tr><td>可管控性</td><td>管理员可控制每个 Skill 的可见范围和使用权限</td></tr>
+  <tr><td>可扩展性</td><td>支持企业统一下发和成员自定义两种来源</td></tr>
+</table>
+
+<!-- 8.2 -->
+<h2 id="sec-8-2">8.2 技能市场</h2>
+
+<p>技能市场分为<strong>已安装区</strong>和<strong>推荐区</strong>：</p>
+
+<table>
+  <tr><th>区域</th><th>说明</th></tr>
+  <tr><td>已安装区</td><td>展示你已经安装的技能，可以启用/禁用/卸载</td></tr>
+  <tr><td>推荐区</td><td>展示技能市场推荐的热门技能，可以一键安装</td></tr>
+</table>
+
+<p>你可以在技能市场中：</p>
+<ul>
+  <li>按分类浏览技能</li>
+  <li>搜索特定技能（如"Excel 自动化"、"会议纪要"）</li>
+  <li>一键安装或上传导入</li>
+  <li>在对话中输入 <code>/</code> 快速唤起技能列表</li>
+</ul>
+
+<!-- 8.3 -->
+<h2 id="sec-8-3">8.3 安装与使用技能</h2>
+
+<h3>安装技能</h3>
+<ol class="step-list">
+  <li>在左侧菜单栏点击 <strong>"技能"</strong>，浏览技能市场</li>
+  <li>搜索你需要的技能（如"Excel 自动化"、"会议纪要"）</li>
+  <li>点击技能卡片查看详情</li>
+  <li>点击 <strong>"安装"</strong>，一键完成</li>
+  <li>安装后即可在对话中调用</li>
+</ol>
+
+<h3>使用技能</h3>
+<ol class="step-list">
+  <li>在对话输入框中输入 <code>/</code> 快速唤起技能列表</li>
+  <li>选择需要的技能</li>
+  <li>按照技能提示输入任务描述</li>
+  <li>WorkBuddy 自动调用技能能力执行任务</li>
+</ol>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 快捷调用</div>
+  <p>在输入框输入 <code>/</code> 可以快速唤起已安装的技能列表，无需每次去技能市场查找。</p>
+</div>
+
+<!-- 8.4 -->
+<h2 id="sec-8-4">8.4 常用技能推荐</h2>
+
+<table>
+  <tr><th>技能名称</th><th>功能</th><th>适用人群</th></tr>
+  <tr><td>Excel 自动化</td><td>数据透视、图表生成、多表合并</td><td>运营、财务</td></tr>
+  <tr><td>会议纪要</td><td>录音转文字 + 结构化整理</td><td>所有人</td></tr>
+  <tr><td>PPT 生成</td><td>从文字描述生成完整 PPT</td><td>所有人</td></tr>
+  <tr><td>代码审查</td><td>自动 Review 代码质量</td><td>开发者</td></tr>
+  <tr><td>周报生成</td><td>从工作记录生成结构化周报</td><td>所有人</td></tr>
+  <tr><td>agent-browser</td><td>浏览器自动化操作</td><td>所有人</td></tr>
+  <tr><td>office-document-suite</td><td>办公文档四件套</td><td>所有人</td></tr>
+  <tr><td>local-whisper</td><td>本地语音转文字</td><td>所有人</td></tr>
+  <tr><td>yt-dlp-downloader</td><td>视频下载工具</td><td>所有人</td></tr>
+  <tr><td>web-search</td><td>联网搜索能力</td><td>所有人</td></tr>
+</table>
+
+<h3>零成本精选 Top 10</h3>
+<ol>
+  <li><strong>Agent Browser</strong>（agent-browser）—— 浏览器自动化操作</li>
+  <li><strong>办公文档四件套</strong>（office-document-suite）—— Word/Excel/PPT/PDF 全覆盖</li>
+  <li><strong>Local Whisper</strong>（local-whisper）—— 本地语音转文字</li>
+  <li><strong>yt-dlp-downloader</strong> —— 视频下载工具</li>
+  <li><strong>Web Search</strong> —— 联网搜索能力</li>
+  <li><strong>Obsidian</strong> —— 本地笔记读写、搜索</li>
+  <li><strong>Skill Scanner</strong> —— 技能扫描工具</li>
+  <li><strong>self-improvement</strong> —— AI 自我改进能力</li>
+  <li><strong>Find Skills</strong> —— 智能查找技能</li>
+  <li><strong>Frontend Design</strong> —— 前端设计辅助</li>
+</ol>
+
+<!-- 8.5 -->
+<h2 id="sec-8-5">8.5 创建自定义技能</h2>
+
+<p>除了使用市场中的技能，你还可以创建自己的自定义技能（零代码）：</p>
+
+<h3>技能包结构</h3>
+<pre><code>my-skill/
+├── SKILL.md          # [必填] 名称 + 描述 + 使用说明
+├── manifest.yaml      # [必填] 版本、依赖、元数据
+├── scripts/           # [可选] 可执行脚本
+├── references/        # [可选] 参考文档
+└── assets/            # [可选] 图标、模板等资源</code></pre>
+
+<h3>manifest.yaml 最小示例</h3>
+<pre><code>name: my-skill
+version: 1.0.0
+description: "我的自定义技能"
+category: data-processing
+author: my-name</code></pre>
+
+<h3>创建步骤</h3>
+<ol class="step-list">
+  <li>按照上述结构创建技能包文件夹</li>
+  <li>编写 <code>SKILL.md</code>，描述技能功能和使用方式</li>
+  <li>编写 <code>manifest.yaml</code>，声明版本和依赖</li>
+  <li>（可选）编写脚本和参考文档</li>
+  <li>在技能市场中上传导入</li>
+</ol>
+
+<!-- 8.6 -->
+<h2 id="sec-8-6">8.6 技能管理</h2>
+
+<h3>技能分类</h3>
+<p>技能按业务领域分组，客户端以树形结构呈现。管理员可创建分类、设置排序位置。</p>
+
+<h3>下发策略</h3>
+<table>
+  <tr><th>策略类型</th><th>定义</th><th>适用场景</th></tr>
+  <tr><td>白名单策略</td><td>指定成员仅能使用列表中的技能</td><td>新员工入职、外包人员受限</td></tr>
+  <tr><td>黑名单策略</td><td>禁止指定成员使用列表中的技能</td><td>高风险技能限制、敏感操作限定</td></tr>
+  <tr><td>默认允许</td><td>无策略时默认允许使用</td><td>无特殊限制的场景</td></tr>
+</table>
+
+<div class="callout callout-warning">
+  <div class="callout-title">⚠️ 优先级规则</div>
+  <p><strong>黑名单 > 白名单 > 默认允许</strong>。"下发策略"与"客户端上传策略"相互独立。</p>
+</div>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：结果查看</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：专家中心 →</a>
+</div>
+
+</div>
+</body>
+</html>
