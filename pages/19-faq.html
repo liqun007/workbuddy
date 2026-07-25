@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第十九章 常见问题与避坑指南 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第十九章 常见问题与避坑指南</h1>
+<p class="page-subtitle">高频问题解答、避坑提醒、快捷键速查与模型选择指南</p>
+
+<!-- 19.1 -->
+<h2 id="sec-19-1">19.1 高频问题解答</h2>
+
+<h3>Q1: WorkBuddy 无法启动？</h3>
+<p><strong>可能原因</strong>：缺少运行环境、杀毒软件拦截、安装路径含中文。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+  <li>确保已安装 Node.js、Git、.NET（Windows）并重启电脑</li>
+  <li>关闭杀毒软件后重新安装</li>
+  <li>重新安装到无中文的路径</li>
+</ul>
+
+<h3>Q2: 插件/技能安装失败？</h3>
+<p><strong>可能原因</strong>：缺少运行环境依赖、网络问题。</p>
+<p><strong>解决方案</strong>：检查 Node.js 版本是否满足要求 → 检查网络连接 → 尝试重新安装。</p>
+
+<h3>Q3: 指令执行失败？</h3>
+<p><strong>可能原因</strong>：文件路径错误、权限不足、文件格式不支持。</p>
+<p><strong>解决方案</strong>：确认文件路径正确 → 检查文件夹授权 → 确认文件格式受支持。</p>
+
+<h3>Q4: macOS 提示"无法打开"？</h3>
+<p><strong>解决方案</strong>：前往"系统偏好设置 → 安全性与隐私"，点击"仍要打开"授权。</p>
+
+<h3>Q5: Credits 不足怎么办？</h3>
+<p><strong>解决方案</strong>：</p>
+<ul>
+  <li>新用户注册即送 5000 Credits</li>
+  <li>基础版 19 元/月</li>
+  <li>选用混元模型可节省消耗</li>
+  <li>避免重复任务，善用继续对话</li>
+</ul>
+
+<h3>Q6: 端口被占用？</h3>
+<p><strong>解决方案</strong>：检查是否有其他 WorkBuddy 实例在运行 → 关闭占用端口的程序 → 重启 WorkBuddy。</p>
+
+<h3>Q7: 上传文件失败？</h3>
+<p><strong>解决方案</strong>：检查文件格式是否受支持 → 大文件可先压缩拆分 → 检查网络连接。</p>
+
+<h3>Q8: 远程操控无响应？</h3>
+<p><strong>解决方案</strong>：检查电脑是否开机且 WorkBuddy 在线 → 检查网络连接 → 重新绑定 IM 渠道。</p>
+
+<h3>Q9: WorkBuddy 和 ChatGPT/Claude 有什么区别？</h3>
+<p>WorkBuddy 不是聊天工具，而是<strong>数字劳动力</strong>——它能实际执行任务、操作本地文件、交付成果（文档/表格/PPT），而不仅仅输出文字。此外还支持多端远程操控、连接器生态、自动化定时任务等。</p>
+
+<h3>Q10: 数据安全吗？</h3>
+<p>安全。所有文件处理默认在本地完成，原始数据不上传云端。服务端仅处理数据片段，用后即弃，不保存也不用于模型训练。只能访问你主动授权的文件夹，系统敏感目录自动拦截，高危操作需二次确认。</p>
+
+<!-- 19.2 -->
+<h2 id="sec-19-2">19.2 避坑提醒</h2>
+
+<div class="callout callout-danger">
+  <div class="callout-title">🚫 七大避坑提醒</div>
+  <ol style="margin:0">
+    <li><strong>拒第三方下载</strong>：仅从官网 codebuddy.cn 下载，避免安全风险</li>
+    <li><strong>谨慎授权</strong>：只授权必要文件夹，不授权整个磁盘</li>
+    <li><strong>重视计划</strong>：复杂任务用 Plan 模式，先看计划再执行</li>
+    <li><strong>装后重启</strong>：安装完成后务必重启电脑，确保环境生效</li>
+    <li><strong>关杀软</strong>：安装时关闭杀毒软件，避免被拦截</li>
+    <li><strong>避中文路径</strong>：安装路径避免中文，防止兼容问题</li>
+    <li><strong>常备份</strong>：重要文件先备份再修改，养成习惯</li>
+  </ol>
+</div>
+
+<!-- 19.3 -->
+<h2 id="sec-19-3">19.3 快捷键速查表</h2>
+
+<table>
+  <tr><th>快捷键</th><th>功能</th><th>说明</th></tr>
+  <tr><td><code>Ctrl + Alt + W</code></td><td>唤起 WorkBuddy</td><td>全局快捷键，随时唤起</td></tr>
+  <tr><td><code>Ctrl/Cmd + V</code></td><td>粘贴截图</td><td>粘贴剪贴板中的图片到输入框</td></tr>
+  <tr><td><code>Enter</code></td><td>发送消息</td><td>在输入框中发送消息</td></tr>
+  <tr><td><code>/</code></td><td>唤起技能列表</td><td>在输入框中快速选择技能</td></tr>
+  <tr><td><code>@</code></td><td>引用上下文</td><td>引用文件、文档、规则等</td></tr>
+  <tr><td><code>Ctrl/Cmd + ←</code></td><td>上一页</td><td>教程内导航</td></tr>
+  <tr><td><code>Ctrl/Cmd + →</code></td><td>下一页</td><td>教程内导航</td></tr>
+</table>
+
+<!-- 19.4 -->
+<h2 id="sec-19-4">19.4 模型选择指南</h2>
+
+<table>
+  <tr><th>模型</th><th>特点</th><th>适用场景</th><th>Credits 消耗</th></tr>
+  <tr><td>混元</td><td>响应快，中文优秀，省 Credits</td><td>日常办公、简单任务、文档写作</td><td>低</td></tr>
+  <tr><td>DeepSeek</td><td>推理能力强，准确度高</td><td>复杂分析、代码开发、逻辑推理</td><td>中</td></tr>
+  <tr><td>GLM</td><td>中文理解优秀</td><td>文档写作、内容创作</td><td>中</td></tr>
+  <tr><td>Kimi</td><td>长文本处理能力强</td><td>长文档分析、阅读、总结</td><td>中</td></tr>
+  <tr><td>Hy3</td><td>新大模型，综合能力强</td><td>综合场景</td><td>中</td></tr>
+</table>
+
+<div class="highlight-box">
+  <div class="title">🎯 模型选择建议</div>
+  <ul style="margin:0">
+    <li><strong>日常任务</strong>：混元（快、省）</li>
+    <li><strong>代码开发</strong>：DeepSeek（准）</li>
+    <li><strong>长文档分析</strong>：Kimi（长文本）</li>
+    <li><strong>中文写作</strong>：GLM 或混元</li>
+    <li><strong>不确定时</strong>：先用混元试试，效果不好再换</li>
+  </ul>
+</div>
+
+<h3>Credits 定价参考</h3>
+<table>
+  <tr><th>方案</th><th>价格</th><th>Credits</th></tr>
+  <tr><td>新用户注册</td><td>免费</td><td>5000 Credits</td></tr>
+  <tr><td>基础版</td><td>19 元/月</td><td>按需购买</td></tr>
+  <tr><td>图片生成</td><td>约 5-10 Credits/张</td><td>-</td></tr>
+  <tr><td>视频生成</td><td>约 50-100 Credits/5秒</td><td>-</td></tr>
+</table>
+
+<div class="callout callout-success">
+  <div class="callout-title">🎉 恭喜！</div>
+  <p>你已经完成了 WorkBuddy 保姆级教程的全部学习。现在你已经掌握了从入门到进阶的全部知识，开始用 WorkBuddy 提升你的工作效率吧！</p>
+</div>
+
+<div class="callout callout-tip">
+  <div class="callout-title">📚 更多资源</div>
+  <ul style="margin:0">
+    <li><a href="https://www.codebuddy.cn/docs/workbuddy/Overview" target="_blank">WorkBuddy 官方文档</a></li>
+    <li><a href="https://www.codebuddy.cn" target="_blank">WorkBuddy 官网</a></li>
+    <li><a href="https://developer.cloud.tencent.com/article/2664219" target="_blank">WorkBuddy 从入门到精通（腾讯云社区）</a></li>
+  </ul>
+</div>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：进阶技巧与最佳实践</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')" style="visibility:hidden">END</a>
+</div>
+
+</div>
+</body>
+</html>

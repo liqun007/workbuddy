@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第十七章 知识库搭建 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第十七章 知识库搭建</h1>
+<p class="page-subtitle">让 AI 基于你的专属资料精准回答——私有化知识库三步搭建</p>
+
+<!-- 17.1 -->
+<h2 id="sec-17-1">17.1 为什么需要知识库</h2>
+
+<p>AI 通用回答虽然强大，但存在以下不足：</p>
+
+<table>
+  <tr><th>问题</th><th>说明</th></tr>
+  <tr><td>缺乏行业/企业特定知识</td><td>通用 AI 不了解你的企业内部信息、行业术语</td></tr>
+  <tr><td>团队资料分散</td><td>文档散落在各处，查找效率低</td></tr>
+  <tr><td>回答不够精准</td><td>需要基于专属资料的精准回答，而非通用信息</td></tr>
+</table>
+
+<div class="highlight-box">
+  <div class="title">💡 解决方案</div>
+  <p style="margin:0">搭建私有化知识库，让 WorkBuddy 基于你的专属资料回答问题，实现<strong>精准、安全、高效</strong>的知识管理。</p>
+</div>
+
+<!-- 17.2 -->
+<h2 id="sec-17-2">17.2 三步搭建知识库</h2>
+
+<h3>Step 1 — 创建知识库</h3>
+<ol class="step-list">
+  <li>进入知识库模块</li>
+  <li>点击<strong>"新建知识库"</strong></li>
+  <li>自定义命名（如"行业素材库"、"项目资料库"、"产品文档库"）</li>
+</ol>
+
+<h3>Step 2 — 上传资料</h3>
+<ol class="step-list">
+  <li>批量上传资料文件</li>
+  <li>支持 PDF、Word、Markdown、TXT 等多种格式</li>
+  <li>系统自动完成文档解析、内容拆分、向量化存储</li>
+</ol>
+
+<h3>Step 3 — 配置调用规则</h3>
+<ol class="step-list">
+  <li>在知识库设置中勾选<strong>"对话优先从本地知识库调取内容"</strong></li>
+  <li>之后对话时，WorkBuddy 会优先从知识库中检索相关信息</li>
+</ol>
+
+<div class="callout callout-success">
+  <div class="callout-title">✅ 三步完成</div>
+  <p>创建知识库 → 上传资料 → 开启调用，简单三步即可拥有专属 AI 知识库。</p>
+</div>
+
+<!-- 17.3 -->
+<h2 id="sec-17-3">17.3 实战效果</h2>
+
+<h3>场景示例</h3>
+
+<table>
+  <tr><th>场景</th><th>使用方式</th><th>效果</th></tr>
+  <tr><td>写文章</td><td>提问"提取 XX 行业政策的核心要点"</td><td>AI 精准从上传资料提取，而非通用回答</td></tr>
+  <tr><td>团队咨询</td><td>成员询问项目细节</td><td>无需翻找历史文档，AI 快速给出准确答案</td></tr>
+  <tr><td>合规查询</td><td>查询公司内部规章制度</td><td>基于企业私有文档精准回答</td></tr>
+</table>
+
+<h3>核心优势</h3>
+
+<div class="feature-grid">
+  <div class="feature-card">
+    <div class="icon">🔒</div>
+    <h4>本地存储</h4>
+    <p>所有数据本地存储，无需担心敏感信息泄露</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🎯</div>
+    <h4>精准提取</h4>
+    <p>基于上传的专属资料精准回答，而非通用信息</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">⚡</div>
+    <h4>快速检索</h4>
+    <p>RAG 向量检索，秒级返回相关内容</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">👥</div>
+    <h4>团队共享</h4>
+    <p>项目知识库支持团队成员共享访问</p>
+  </div>
+</div>
+
+<h3>与项目资产库的关系</h3>
+<p>在项目协作中，项目资产库也支持以 RAG 形式注入上下文：</p>
+<ul>
+  <li>成员手动上传内容到项目资产库</li>
+  <li>将任务产物保存到资料库</li>
+  <li>资料库内容以 RAG 形式注入任务上下文</li>
+  <li>Agent 也可通过 read-file 直接读取</li>
+</ul>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 最佳实践</div>
+  <ul style="margin:0">
+    <li>资料越完整，回答越精准——建议持续补充和更新知识库</li>
+    <li>文档命名清晰有助于检索效果</li>
+    <li>敏感信息建议不放入知识库，或在文档中标注"内部使用"</li>
+    <li>定期清理过时资料，保持知识库的时效性</li>
+  </ul>
+</div>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：跨端远程操控</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：进阶技巧与最佳实践 →</a>
+</div>
+
+</div>
+</body>
+</html>

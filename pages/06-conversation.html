@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第六章 任务对话 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第六章 任务对话</h1>
+<p class="page-subtitle">在对话区持续交互：追问、上传文件、查看执行过程、中断与继续</p>
+
+<!-- 6.1 -->
+<h2 id="sec-6-1">6.1 对话方式</h2>
+
+<p>任务创建后，你会在中间区域与 WorkBuddy 持续对话。使用方式围绕"输入需求、补充上下文、查看执行过程、继续追问"展开。</p>
+
+<p>常见操作包括：</p>
+<ul>
+  <li>在输入框中直接输入需求或补充说明</li>
+  <li>点击发送按钮或按回车键发送消息</li>
+  <li>在已有任务中继续追问，让 WorkBuddy 接着上一次的上下文继续处理</li>
+  <li>在任务执行过程中查看回复、结果和中间步骤</li>
+</ul>
+
+<!-- 6.2 -->
+<h2 id="sec-6-2">6.2 顶部操作栏</h2>
+
+<p>对话区顶部除了显示当前任务标题，还提供一些常用操作：</p>
+
+<table>
+  <tr><th>序号</th><th>功能</th><th>说明</th></tr>
+  <tr><td>1</td><td>🔍 对话内搜索</td><td>输入关键词快速查找目标对话内容</td></tr>
+  <tr><td>2</td><td>🔗 分享任务</td><td>自动生成公开链接，分享到任意渠道</td></tr>
+  <tr><td>3</td><td>📜 历史提问</td><td>查看任务内历史对话记录，支持点击跳转</td></tr>
+  <tr><td>4</td><td>📋 显示详情面板</td><td>打开右侧边栏，查看产物、全部文件、变更和内置浏览器</td></tr>
+</table>
+
+<!-- 6.3 -->
+<h2 id="sec-6-3">6.3 消息发送与追问</h2>
+
+<p>在对话区底部的输入框中，你可以随时发送新消息：</p>
+
+<table>
+  <tr><th>类型</th><th>示例</th></tr>
+  <tr><td>新需求</td><td>"再加一个饼图"、"把字体调大一点"</td></tr>
+  <tr><td>修改意见</td><td>"表格按销售额排序"、"报告加上执行摘要"</td></tr>
+  <tr><td>继续追问</td><td>"帮我导出成 PDF"、"再分析一下环比变化"</td></tr>
+</table>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 连续对话</div>
+  <p>WorkBuddy 会基于之前的对话上下文继续处理，无需重复描述背景信息。保持连续对话是提升效率的关键。</p>
+</div>
+
+<!-- 6.4 -->
+<h2 id="sec-6-4">6.4 文件与图片上传</h2>
+
+<p>除了直接输入文字，你也可以补充文件或图片作为上下文：</p>
+
+<table>
+  <tr><th>方式</th><th>操作</th></tr>
+  <tr><td>粘贴截图</td><td>使用 <code>Ctrl/Cmd + V</code> 直接粘贴剪贴板中的图片</td></tr>
+  <tr><td>上传文件</td><td>点击上传按钮，或直接拖拽文件到输入框区域</td></tr>
+  <tr><td>补充本地内容</td><td>结合文件、图片和文字说明，让 WorkBuddy 更快理解问题</td></tr>
+</table>
+
+<h3>支持的文件类型</h3>
+<p>PDF、Word、TXT、Markdown、RTF、Excel、CSV、TSV、PPT、常见图片（JPG/PNG/GIF/BMP）、ZIP/RAR 压缩包以及各类编程语言代码文件。</p>
+
+<div class="callout callout-warning">
+  <div class="callout-title">🔒 隐私授权边界</div>
+  <ul style="margin:0">
+    <li>所有文件处理默认在<strong>本地完成</strong>，原始数据不上传云端</li>
+    <li>服务端仅处理数据片段，用后即弃，不保存也不用于模型训练</li>
+    <li>WorkBuddy 只能访问你<strong>主动勾选授权</strong>的文件夹</li>
+    <li>系统敏感目录自动拦截，高危操作需二次确认</li>
+  </ul>
+</div>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 上传失败排查</div>
+  <p>上传文件失败时建议检查：文件格式是否受支持 → 大文件可先压缩拆分 → 检查网络连接。</p>
+</div>
+
+<!-- 6.5 -->
+<h2 id="sec-6-5">6.5 执行过程展示</h2>
+
+<p>WorkBuddy 在执行任务时，会把关键步骤和结果展示在对话区中，方便你随时了解进展。</p>
+
+<p>你通常会看到以下内容：</p>
+<ul>
+  <li>WorkBuddy 的回复内容</li>
+  <li>执行中的阶段说明（如"正在分析数据"、"正在生成报告"）</li>
+  <li>已生成的结果摘要</li>
+  <li>可展开查看的中间步骤</li>
+</ul>
+
+<p>这样做的好处是，你不需要离开当前任务，就能在同一处持续查看输入、过程和输出。</p>
+
+<!-- 6.6 -->
+<h2 id="sec-6-6">6.6 中断与继续</h2>
+
+<p>如果任务正在执行，输入框区域会显示<strong>停止入口</strong>，你可以随时中断当前执行。</p>
+
+<p>中断后，你仍然可以：</p>
+<ul>
+  <li>继续补充新的说明</li>
+  <li>调整需求后重新发送</li>
+  <li>基于已有内容继续推进任务</li>
+</ul>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 重点</div>
+  <p>中断不会丢失已有内容。你可以随时基于已有上下文继续对话，而不是每次都重新开始。</p>
+</div>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：任务管理</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：结果查看 →</a>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第十一章 MCP 配置 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第十一章 MCP 配置</h1>
+<p class="page-subtitle">Model Context Protocol——让 AI 无缝连接外部数据源和工具</p>
+
+<!-- 11.1 -->
+<h2 id="sec-11-1">11.1 什么是 MCP</h2>
+
+<p><strong>MCP（Model Context Protocol，模型上下文协议）</strong>旨在解决大语言模型（LLM）与外部数据源及工具之间无缝集成的需求。它通过标准化 AI 系统与数据源的交互方式，帮助模型获取更丰富的上下文信息，从而生成更准确、更相关的响应。</p>
+
+<div class="highlight-box">
+  <div class="title">💡 通俗理解</div>
+  <p style="margin:0">MCP 就像 USB 接口——数据库、Jira、浏览器、地图、API 都能"插"上去，让 AI 直接使用这些工具。</p>
+</div>
+
+<!-- 11.2 -->
+<h2 id="sec-11-2">11.2 MCP 核心功能</h2>
+
+<table>
+  <tr><th>功能</th><th>说明</th></tr>
+  <tr><td>上下文共享</td><td>应用程序可以通过 MCP 向模型提供所需的上下文信息（如文件内容、数据库记录等），增强模型的理解能力</td></tr>
+  <tr><td>工具暴露</td><td>MCP 允许应用程序将功能（如文件读写、API 调用）暴露给模型，模型可以调用这些工具完成复杂任务</td></tr>
+  <tr><td>可组合的工作流</td><td>开发者可以利用 MCP 集成多个服务和组件，构建灵活、可扩展的 AI 工作流</td></tr>
+  <tr><td>安全性</td><td>通过本地服务器运行，MCP 避免将敏感数据上传至第三方平台，确保数据隐私</td></tr>
+</table>
+
+<!-- 11.3 -->
+<h2 id="sec-11-3">11.3 一键安装 MCP Server</h2>
+
+<p>WorkBuddy 内置了 MCP Market，提供了大量预配置的 MCP Server，可以一键安装：</p>
+
+<ol class="step-list">
+  <li>在侧栏对话面板右上方，点击 <strong>CodeBuddy Settings</strong> 按钮</li>
+  <li>切换到 <strong>MCP</strong> 标签页</li>
+  <li>在 MCP Market 中浏览可用的 MCP Server</li>
+  <li>根据你的实际需求，选择 MCP Server 进行一键安装</li>
+  <li>安装成功后，MCP Server 显示绿色状态；安装失败显示红色状态</li>
+</ol>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 状态说明</div>
+  <p><span class="badge badge-success">绿色</span> = 安装成功，正在运行 ｜ <span class="badge badge-warning">红色</span> = 安装失败，需排查</p>
+</div>
+
+<!-- 11.4 -->
+<h2 id="sec-11-4">11.4 自定义配置 MCP Server</h2>
+
+<p>如果 MCP Market 中没有你需要的 Server，可以手动配置：</p>
+
+<ol class="step-list">
+  <li>在 MCP 标签页下，点击右侧 <strong>Add MCP</strong> 按钮</li>
+  <li>在 JSON 配置文件中，添加 MCP Server 配置内容</li>
+  <li>保存配置</li>
+</ol>
+
+<h3>配置示例</h3>
+<pre><code>{
+  "mcpServers": {
+    "python-tools": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["-m", "my_mcp_server"],
+      "env": {
+        "PYTHONPATH": "/path/to/tools"
+      },
+      "description": "Python 工具集"
+    }
+  }
+}</code></pre>
+
+<h3>配置文件位置</h3>
+<table>
+  <tr><th>级别</th><th>路径</th><th>作用范围</th></tr>
+  <tr><td>用户级</td><td><code>~/.workbuddy/mcp.json</code></td><td>所有项目共享</td></tr>
+  <tr><td>项目级</td><td>项目工作目录下的配置</td><td>仅当前项目</td></tr>
+</table>
+
+<h3>配置字段说明</h3>
+<table>
+  <tr><th>字段</th><th>说明</th></tr>
+  <tr><td><code>type</code></td><td>通信类型，常用 <code>stdio</code>（标准输入输出）</td></tr>
+  <tr><td><code>command</code></td><td>启动 MCP Server 的命令</td></tr>
+  <tr><td><code>args</code></td><td>命令参数数组</td></tr>
+  <tr><td><code>env</code></td><td>环境变量</td></tr>
+  <tr><td><code>description</code></td><td>Server 描述信息</td></tr>
+</table>
+
+<h3>企业微信机器人 WebHook 接入示例</h3>
+<pre><code>{
+  "mcpServers": {
+    "wecom-bot": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["-m", "wecom-bot-mcp"],
+      "env": {
+        "WEBHOOK_URL": "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=YOUR_KEY"
+      },
+      "description": "企业微信机器人消息推送"
+    }
+  }
+}</code></pre>
+
+<!-- 11.5 -->
+<h2 id="sec-11-5">11.5 使用 MCP</h2>
+
+<p>MCP Server 安装成功后，你有两种方式使用：</p>
+
+<h3>方式一：验证使用</h3>
+<p>在 MCP Server 右侧点击 <strong>Try to Run</strong> 按钮，进行验证和测试。</p>
+
+<h3>方式二：任务中调用</h3>
+<p>直接在 Craft 模式下输入任务需求，Agent 会根据你的任务需求进行分析，然后自动调用 MCP Server 工具来完成任务。</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 使用示例</div>
+  <p>配置了数据库 MCP 后，你可以说："查询数据库里上周的销售记录，生成一份分析报告"——WorkBuddy 会自动调用 MCP 工具查询数据库，然后生成报告。</p>
+</div>
+
+<div class="callout callout-warning">
+  <div class="callout-title">⚠️ 安全提醒</div>
+  <p>自定义 MCP Server 的访问范围由你的配置决定，WorkBuddy 不预设范围，<strong>请审慎评估后再启用</strong>。API 密钥与 Token 请妥善保管，避免在公共设备或共享环境填写。</p>
+</div>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：连接器</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：自动化与定时任务 →</a>
+</div>
+
+</div>
+</body>
+</html>

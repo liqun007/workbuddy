@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第十五章 多模态内容生成 | WorkBuddy 保姆级教程</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<div class="page-content">
+
+<h1>第十五章 多模态内容生成</h1>
+<p class="page-subtitle">图片、视频、3D 模型——WorkBuddy 的多模态创作能力</p>
+
+<!-- 15.1 -->
+<h2 id="sec-15-1">15.1 图片生成</h2>
+
+<p>WorkBuddy 支持通过自然语言描述生成图片，或基于已有图片进行编辑和变换。</p>
+
+<h3>两种生成方式</h3>
+<table>
+  <tr><th>方式</th><th>说明</th><th>示例</th></tr>
+  <tr><td>文生图</td><td>从文字描述生成新图片</td><td>"生成一张日落时分的山景图片，暖色调"</td></tr>
+  <tr><td>图生图</td><td>基于已有图片进行变换</td><td>"把这张照片的背景换成海边"</td></tr>
+</table>
+
+<div class="callout callout-warning">
+  <div class="callout-title">💰 积分消耗</div>
+  <p>图片生成会调用额外的模型，单张图片消耗约 <strong>5-10 Credits</strong>。生成前请确认积分余额充足。</p>
+</div>
+
+<h3>使用建议</h3>
+<ul>
+  <li><strong>描述越详细，效果越好</strong>：包含风格、色调、构图、主体等要素</li>
+  <li><strong>指定风格</strong>：如"水彩画风格"、"照片级真实感"、"扁平插画"</li>
+  <li><strong>指定尺寸</strong>：如"16:9 横版"、"1:1 正方形"</li>
+  <li><strong>图生图变换</strong>：上传参考图后描述想要的变换效果</li>
+</ul>
+
+<!-- 15.2 -->
+<h2 id="sec-15-2">15.2 视频生成</h2>
+
+<p>WorkBuddy 支持从文字描述或输入图片生成短视频。</p>
+
+<h3>两种生成方式</h3>
+<table>
+  <tr><th>方式</th><th>说明</th></tr>
+  <tr><td>文生视频</td><td>从文字描述生成视频</td></tr>
+  <tr><td>图生视频</td><td>基于输入图片创建视频</td></tr>
+</table>
+
+<div class="callout callout-warning">
+  <div class="callout-title">💰 积分消耗</div>
+  <p>视频生成消耗较多 Credits，5 秒视频约消耗 <strong>50-100 Credits</strong>。视频生成过程通常需要 1-3 分钟。</p>
+</div>
+
+<h3>使用建议</h3>
+<ul>
+  <li>视频长度通常为 <strong>5 秒左右</strong></li>
+  <li>描述应包含<strong>场景、动作、镜头运动</strong>等要素</li>
+  <li>生成结果保存为本地 MP4 文件</li>
+  <li>图生视频时，上传的图片作为视频的第一帧</li>
+</ul>
+
+<!-- 15.3 -->
+<h2 id="sec-15-3">15.3 3D 模型生成</h2>
+
+<p>WorkBuddy 支持 AI 生成 3D 模型，适用于产品设计、游戏开发、3D 打印等场景。</p>
+
+<h3>支持的生成方式</h3>
+<table>
+  <tr><th>方式</th><th>说明</th></tr>
+  <tr><td>文生 3D 模型</td><td>从文字描述生成 3D 模型</td></tr>
+  <tr><td>图生 3D 模型</td><td>基于输入图片生成 3D 模型</td></tr>
+</table>
+
+<h3>适用场景</h3>
+<ul>
+  <li>产品设计：快速生成产品 3D 原型</li>
+  <li>游戏开发：生成游戏角色、道具模型</li>
+  <li>建筑可视化：生成建筑 3D 模型</li>
+  <li>3D 打印：生成可打印的 3D 模型文件</li>
+</ul>
+
+<!-- 15.4 -->
+<h2 id="sec-15-4">15.4 网站与应用开发</h2>
+
+<p>WorkBuddy 不仅能生成内容，还能<strong>直接开发网站和应用</strong>。</p>
+
+<h3>全流程辅助</h3>
+<ol class="step-list">
+  <li><strong>需求分析</strong>：描述你想要的网站或应用功能</li>
+  <li><strong>技术选型</strong>：WorkBuddy 推荐合适的技术栈</li>
+  <li><strong>代码生成</strong>：自动生成前端、后端代码</li>
+  <li><strong>本地预览</strong>：在内置浏览器中实时预览效果</li>
+  <li><strong>迭代优化</strong>：通过对话不断调整和改进</li>
+  <li><strong>部署上线</strong>：指导部署到服务器或云平台</li>
+</ol>
+
+<h3>支持的开发类型</h3>
+<table>
+  <tr><th>类型</th><th>说明</th></tr>
+  <tr><td>静态网站</td><td>HTML/CSS/JS 页面、落地页、企业官网</td></tr>
+  <tr><td>Web 应用</td><td>React/Vue 等框架的交互式应用</td></tr>
+  <tr><td>数据分析仪表盘</td><td>Chart.js / ECharts 数据可视化</td></tr>
+  <tr><td>交互原型</td><td>可交互的产品原型和流程图</td></tr>
+  <tr><td>幻灯片 Deck</td><td>HTML 格式的演示文稿</td></tr>
+</table>
+
+<div class="callout callout-tip">
+  <div class="callout-title">💡 最佳实践</div>
+  <p>使用 <strong>Plan 模式</strong>开发网站效果最好——先让 WorkBuddy 制定技术方案和架构设计，确认后再执行代码生成。在内置浏览器中实时预览，通过对话迭代调整。</p>
+</div>
+
+<div class="callout callout-success">
+  <div class="callout-title">✅ 从需求到上线</div>
+  <p>WorkBuddy 可以完成从需求分析到代码生成再到部署指导的全流程，让非开发者也能构建自己的网站和应用。</p>
+</div>
+
+<div class="page-nav">
+  <a href="javascript:void(0)" onclick="parent.navigatePage('prev')">← 上一章：项目协作</a>
+  <a href="javascript:void(0)" onclick="parent.navigatePage('next')">下一章：跨端远程操控 →</a>
+</div>
+
+</div>
+</body>
+</html>
